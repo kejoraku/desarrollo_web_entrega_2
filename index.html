@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-witdh, initial-scale=1.0">
+
+    <!-- Vinculamos el CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <title>Revolución Otaku Oficial</title>
+</head>  
+
+<header>
+    <!-- Asigno la etiqueta nav para hacer el navegador-->
+    <nav class="navbar">
+        <!-- El logo en la posición de el margen superior izquierdo -->
+        <div class="logo">
+            <!-- Si el usuario hace click en el logo quiero que redirija a inicio -->
+            <a href="index.html">Revolución Otaku Oficial</a>
+        </div>
+        <!-- Genero una vista diferente para dispositivos con resolución pequeña donde el menú se disponga en barritas
+         al hacerle click se despliega un menú con las pestañas de la página -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+    <!-- Navegador en el margen derecho -->
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pages/tienda.html">Tienda</a></li>
+            <li><a href="pages/catalogo.html">Catálogo</a></li>
+            <li><a href="pages/colecciones&cosplay.html">Colecciones & Cosplay</a></li>
+            <li><a href="pages/contacto.html">Contacto</a></li>
+        </ul>   
+    </nav>
+</header>
+
+<body> 
+    <!-- <hr> -->
+
+    <!-- Span, etiqueta de línea ocupa solo el ancho de su contenido, a diferencia de etiqueta de bloque -->
+
+    <h1>¡Indumentaria pensada para tus personajes favoritos y tu día a día!</h1>
+
+    <section class="container-img-banner-principal">
+        <!-- Banner principal -->
+        <img class="image-banner-principal" src="images/inicio/Kayle Pentakill.png">
+    </section>
+    
+    
+    <h1>Sección Destacada
+        <br>
+        ¡Nuestro productos mas vendidos!
+    </h1>
+
+
+
+    <section>
+        <!-- Sección Destacada -->
+        <ul>
+            <div>
+                <p class="titulo-seccion-destacada">Cosplay Carlotta Montelli</p>
+                <li class="seccion-destacada"><img class="img-inicio-seccion-destacada"  src="images/inicio/inicio_caja_1.png" alt="Cosplay Carlotta Montelli"></li>
+                
+                <p class="titulo-seccion-destacada">Remera Hanasato Minori </p>
+                <li class="seccion-destacada"><img class="img-inicio-seccion-destacada"  src="images/inicio/inicio_caja_2.png" alt="Remera Hanasato Minori"></li>
+                
+                <p class="titulo-seccion-destacada">Remera Satoru Gojo </p>
+                <li class="seccion-destacada"><img class="img-inicio-seccion-destacada" src="images/inicio/inicio_caja_3.png" alt="Remera Satoru Gojo"></li>
+                
+                <p class="titulo-seccion-destacada">Remera Ben 10</p>
+                <li class="seccion-destacada"><img class="img-inicio-seccion-destacada" src="images/inicio/inicio_caja_4.png" alt="Remera Ben 10"></li>
+            </div>    
+        </ul>
+    </section>
+
+    <div class="redireccion-inicio-a-catalogo">
+        <a href="pages/catalogo.html">Ver Catálogo</a>
+    </div>
+
+
+    <h1>
+        <a href="index.html">Volver arriba</a>
+    </h1>
+
+</body>
+
+<footer>
+
+    <h2>Revolución Otaku Oficial ©</h2>
+
+</footer>
+</html>

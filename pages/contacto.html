@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-witdh, initial-scale=1.0">
+    
+    <!-- Vinculamos el CSS -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    
+    <title>Revolución Otaku Oficial</title>
+</head>
+
+<header>
+    <!-- Asigno la etiqueta nav para hacer el navegador-->
+    <nav class="navbar">
+        <!-- El logo en la posición de el margen superior izquierdo -->
+        <div class="logo">
+            <!-- Si el usuario hace click en el logo quiero que redirija a inicio -->
+            <a href="../index.html">Revolución Otaku Oficial</a>
+        </div>
+        <!-- Genero una vista diferente para dispositivos con resolución pequeña donde el menú se disponga en barritas
+         al hacerle click se despliega un menú con las pestañas de la página -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+    <!-- Navegador en el margen derecho -->
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/tienda.html">Tienda</a></li>
+            <li><a href="../pages/catalogo.html">Catálogo</a></li>
+            <li><a href="../pages/colecciones&cosplay.html">Colecciones & Cosplay</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+        </ul>   
+    </nav>
+</header>
+
+<body>
+    <div class="titulo-contacto">
+        <h3>¡Envíanos tu consulta!</h3>
+    </div>
+
+    <div class="contenedor-img-contacto">
+        <img class="img-contacto" src="../images/contacto/contacto.jpg" alt="Hatsune Miku">
+    </div>
+
+
+    <section>
+        <!-- Formulario -->
+        <div>
+            <form class="items-formulario-contacto" action="/submit" method="post">
+                <label class="item-label-en-formulario" for="nombre">Nombre:</label>
+                <input type="text" name="" id="nombre">
+
+                <label class="item-label-en-formulario" for="email">E-mail:</label>
+                <input type="text" name="" id="email">
+
+                <label class="item-label-en-formulario" for="pais">País:</label>
+                    <select name="" id="">
+                        <option value="">Brasil</option>
+                        <option value="">Argentina</option>
+                        <option value="">Uruguay</option>
+                        <option value="">Chile</option>
+                    </select>
+
+                <label class="item-label-en-formulario" for="mensaje">Mensaje:</label>
+                <textarea class="caja-de-mensaje-de-contacto" name="mensaje" id="mensaje"></textarea>
+
+                <input class="item-label-en-formulario" type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
+
+
+</body>
+<footer>
+    <h2>Revolución Otaku Oficial ©</h2>
+
+</footer>
+</html>

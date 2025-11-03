@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+/* La Etiqueta <hr> me genera una línea como de "corte" */
+
+body{
+    background-color: #FFFD00;
+}
+
+/* ---------------------------------------------Navegador--------------------------------------------- */
+
+
+/* Navbar estilo Crunchyroll */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #FFFD00;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+  
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 60px;
+}
+  
+.logo a {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #ff9900; /* Color Crunchyroll */
+    text-decoration: none;
+}
+  
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+  
+.nav-links a:hover {
+    color: #ff9900;
+}
+  
+  /* Menú de hamburguesa para telefonos donde no se pueda ver bien la página */
+.menu-icon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    user-select: none;
+}
+  
+.menu-toggle {
+    display: none;
+}
+  
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .navbar {
+      padding: 0 16px;
+    }
+    .nav-links {
+      position: fixed;
+      top: 60px;
+      right: 0;
+      background: #FFFD00;
+      flex-direction: column;
+      width: 200px;
+      height: calc(100vh - 60px);
+      transform: translateX(100%);
+      transition: transform 0.3s;
+      box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+      gap: 0;
+    }
+    .nav-links li {
+      border-bottom: 1px solid #eee;
+      padding: 16px 0;
+      text-align: center;
+      margin: 0 24px;
+    }
+    .menu-icon {
+      display: block;
+    }
+    .menu-toggle:checked + .menu-icon + .nav-links {
+      transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+/* -------------------------------------------Contenido principal inicio------------------------------ */
+
+body{
+    padding-top: 60px;
+}
+
+
+
+
+.container-img-banner-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+.image-banner-principal{
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+/*Estilos para pantallas más grandes (computadoras)*/
+@media (min-width: 320px) {
+        .image-banner-principal {
+            width: 50%;
+            margin-left: 0; /* Centra el contenedor */
+            }
+        } 
+
+h1{
+    font-size: 180%;
+    text-align: center;
+    padding: 3%;
+}
+
+
+
+
+/* ------------------------------------------Cajitas de inicio---------------------------------------- */
+
+/*Utilizo Box Model y Flexbox para las cajitas con el display flex*/
+
+.titulo-seccion-destacada{
+    justify-content: center; /*Nos permite orientas de forma horizontal el contenido*/
+    display: flex; /*Activa Flexbox */
+    text-align: center;
+    padding: 3%;
+    font-size: 125%;
+    font-weight: bolder;
+}
+
+.seccion-destacada{
+    display:flex; /*Activa Flexbox */
+    justify-content: center; /*Nos permite orientas de forma horizontal el contenido*/
+    align-items: center;
+}
+
+            /*Esta parte la podría haber resuelto con flex-direction: column*/
+
+
+
+
+
+            
+.img-inicio-seccion-destacada{
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*Estilos para pantallas más grandes (computadoras)*/
+@media (min-width: 320px) {
+        .img-inicio-seccion-destacada{
+            width: 35%;
+            margin-left: 0;
+            }
+        } 
+
+
+.redireccion-inicio-a-catalogo{
+    display:flex;
+    justify-content: center; /*Nos permite orientas de forma horizontal el contenido*/
+    text-align: center;
+    padding: 3%;
+    color: black;
+    text-shadow:
+            -1px -1px 0 #4191A5, /* Sombra superior izquierda */
+            1px -1px 0 #4191A5, /* Sombra superior derecha */
+            -1px  1px 0 #4191A5, /* Sombra inferior izquierda */
+            1px  1px 0 #4191A5; /* Sombra inferior derecha */;
+}
+
+/*----------------------------------------------Cajitas Tienda-----------------------------------------*/
+
+/*Utilizo Box Model y Flexbox para las cajitas con el display flex*/
+
+h3{
+    font-size: 150%;
+}
+
+.contenedor-de-cajitas-tienda{
+    display: flex; /*Activa Flexbox */
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.cajas-productos-tienda{
+    padding: 3% 0 3% 0;
+    list-style: none;
+    text-align: center;
+    width: 33%;
+}
+
+.img-caja-tienda{
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*Estilos para pantallas más grandes (computadoras)*/
+@media (min-width: 320px) {
+        .img-caja-tienda{
+            width: 70%;
+            margin-left: 0;
+            }
+        } 
+
+/*--------------------------------------Colecciones & Cosplay-----------------------------------------*/
+
+.titulo-colecciones-cosplay{
+    text-align: center;
+    font-size: 250%;
+    padding: 3%;
+}
+
+.descripcion-de-titulo-colecciones-cosplay{
+    font-size: 150%;
+    text-align: center;
+    padding-bottom: 2%;
+    font-style: italic;
+    margin: 0 10% 0 10%;
+}
+
+/*-----------------------------------Cajitas de colecciones--------------------------------------------*/
+.contenedor-de-cajitas-colecciones-cosplay{
+    display: flex; /*Activa Flexbox */
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.cajas-productos-colecciones-cosplay{
+    padding: 3% 5% 3% 5%;
+    list-style: none;
+    text-align: center;
+    width: 33%; 
+}
+
+.img-caja-colecciones-cosplay{
+    /* width: 50%; */
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*Estilos para pantallas más grandes (computadoras)*/
+@media (min-width: 320px) {
+        .img-caja-colecciones-cosplay{
+            width: 100%;
+            margin-left: 0;
+            }
+        } 
+
+
+/*-----------------------------------------------Contacto----------------------------------------------*/
+
+.titulo-contacto{
+    display:flex; /*Activa Flexbox */
+    justify-content: center; /*Nos permite orientas de forma horizontal el contenido*/
+    align-items: center;
+    padding: 2%;
+    font-size: 150%;
+}
+
+.contenedor-img-contacto{
+    display:flex; /*Activa Flexbox */
+    justify-content: center; /*Nos permite orientas de forma horizontal el contenido*/
+    align-items: center;
+    padding: 1%;
+}
+.img-contacto{
+    width: 45%;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*Estilos para pantallas más grandes (computadoras)*/
+@media (min-width: 320px) {
+        .img-contacto{
+            width: 50%;
+            margin-left: 0;
+            }
+        .items-formulario-contacto{
+            margin-left: 1%;    
+        } 
+}
+
+.items-formulario-contacto{
+    display: flex; /*Activa Flexbox */
+    flex-direction: column;
+    padding: 3%;
+    width: 30%;
+}
+
+.item-label-en-formulario{
+    padding: 2%;
+}
+
+.caja-de-mensaje-de-contacto{
+    height: 150%; /*Por qué no lo hace mas "alto"?*/
+}
+
+/* -------------------------------------------------Footer-------------------------------------------- */
+
+h2{
+    color: white;
+    font-size: 180%;
+    text-align: center;
+    padding: 5%;
+    background-color: rgb(0, 0, 0); /* Fondo de tu footer */
+    padding: 20px; /* Relleno para que la sombra se vea bien */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra debajo del footer */
+}
