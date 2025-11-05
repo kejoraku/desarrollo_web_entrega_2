@@ -13,7 +13,7 @@ body{
 /* ---------------------------------------------Navegador--------------------------------------------- */
 
 
-/* Navbar estilo Crunchyroll */
+
 header {
     width: 100%;
     position: fixed;
@@ -32,12 +32,14 @@ header {
     margin: 0 auto;
     padding: 0 32px;
     height: 60px;
+    background-color: #FFFD00;
+
 }
   
 .logo a {
     font-size: 1.6em;
     font-weight: bold;
-    color: #ff9900; /* Color Crunchyroll */
+    color: #ff9900;
     text-decoration: none;
 }
   
@@ -61,7 +63,7 @@ header {
     color: #ff9900;
 }
   
-  /* Menú de hamburguesa para telefonos donde no se pueda ver bien la página */
+/* Menú de hamburguesa para telefonos donde no se pueda ver bien la página */
 .menu-icon {
     display: none;
     font-size: 2em;
@@ -73,7 +75,7 @@ header {
     display: none;
 }
   
-/* RESPONSIVE */
+/* Responsivo */
 @media (max-width: 800px) {
     .navbar {
       padding: 0 16px;

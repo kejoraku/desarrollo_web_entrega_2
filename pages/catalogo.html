@@ -1,57 +1,250 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-witdh, initial-scale=1.0">
-    
-    <!-- Vinculamos el CSS -->
-    <link rel="stylesheet" href="../CSS/style.css">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revolución Otaku Oficial</title>
+    <!-- Bootstrap 5.3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
-<header>
-    <!-- Asigno la etiqueta nav para hacer el navegador-->
-    <nav class="navbar">
-        <!-- El logo en la posición de el margen superior izquierdo -->
-        <div class="logo">
-            <!-- Si el usuario hace click en el logo quiero que redirija a inicio -->
-            <a href="../index.html">Revolución Otaku Oficial</a>
+<!-- Voy a integrar el navegador del header dentro del body -->
+
+<!-- Con las integraciones de bootstrap y etiquetas modifique un poco los diseños planteados en un principio del wireframe -->
+
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+    <header>
+
+        <!-- Para el navegador mantuve el mismo diseño planteado y agregué un estilo diferente con un sombreado, manteniendo todas las funcionalidades que tenia originalmente -->
+
+        <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="../index.html">Revolución Otaku Oficial</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/tienda.html">Tienda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/colecciones&cosplay.html">Colecciones & Cosplay</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- La idea original era generar una instancia donde vendedores con una cuenta en la web puedan subir sus productos categorizandolos por cosplay, peluca, calzado, prop
+    Noté que no tomé en cuenta un factor muy improtante como el talle, por lo tanto, no lo pude implementar -->
+    <main class="flex-shrink-0 pt-5" style="margin-top: 70px;">
+        <div class="container text-center my-5">
+
+            <h1 class="mb-4">
+                Catálogo General
+            </h1>
+
+            <p class="lead">
+                Filtrá nuestros productos por tipo usando los botones:
+            </p>
+
+            <div class="btn-group mb-5" role="group" aria-label="Filtro de catálogo">
+                <button type="button" class="btn btn-dark filter-btn" data-category="all">Todos</button>
+                <button type="button" class="btn btn-outline-dark filter-btn" data-category="peluca">Peluca</button>
+                <button type="button" class="btn btn-outline-dark filter-btn" data-category="props">Props</button>
+                <button type="button" class="btn btn-outline-dark filter-btn" data-category="cosplay">Cosplay</button>
+                <button type="button" class="btn btn-outline-dark filter-btn" data-category="calzado">Calzado</button>
+            </div>
+
         </div>
-        <!-- Genero una vista diferente para dispositivos con resolución pequeña donde el menú se disponga en barritas
-         al hacerle click se despliega un menú con las pestañas de la página -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">☰</label>
-    <!-- Navegador en el margen derecho -->
-        <ul class="nav-links">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../pages/tienda.html">Tienda</a></li>
-            <li><a href="../pages/catalogo.html">Catálogo</a></li>
-            <li><a href="../pages/colecciones&cosplay.html">Colecciones & Cosplay</a></li>
-            <li><a href="../pages/contacto.html">Contacto</a></li>
-        </ul>   
-    </nav>
-</header>
 
-<body>
-    
-    <h3>
-        Para la sección de catalogo quisiera generar un tipo de entrada de productos 
-        con filtros donde pueda visualizar las ofertas a la venta por vendedores particulares
-        En tienda son objetos exclusivos en disponibilidad por "Revolución otaku oficial"
-    </h3>
+        <section class="container">
+            <div class="row g-4 justify-content-center" id="catalogo-productos">
+                
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex catalog-item peluca">
+                    <div class="card shadow w-100">
+                        <img src="../images/tienda/tienda_caja_1.png" class="card-img-top" alt="Peluca">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Peluca Gold Ship
+                            </h5>
+                            <p class="card-text">
+                                Inspirado en Uma Musume
+                            </p>
+                            <span class="badge bg-secondary">
+                                Peluca
+                            </span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex catalog-item peluca">
+                    <div class="card shadow w-100">
+                        <img src="../images/tienda/tienda_caja_3.png" class="card-img-top" alt="Peluca">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Peluca Holo
+                            </h5>
+                            <p class="card-text">
+                                Orejas & Cola
+                            </p>
+                            <span class="badge bg-secondary">
+                                Peluca
+                            </span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex catalog-item props">
+                    <div class="card shadow w-100">
+                        <img src="../images/tienda/tienda_caja_4.png" class="card-img-top" alt="Props">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Marin Kitagawa Props
+                            </h5>
+                            <p class="card-text">
+                                Incluye props y peluca
+                            </p>
+                            <span class="badge bg-info">
+                                Props
+                            </span>
+                        </div>
+                    </div>
+                </div>
 
-    <h1>
-        <a href="../pages/catalogo.html">Volver arriba</a>
-    </h1>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex catalog-item props">
+                    <div class="card shadow w-100">
+                        <img src="../images/tienda/tienda_caja_5.png" class="card-img-top" alt="Props">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Himejima Gyomei
+                            </h5>
+                            <p class="card-text">
+                                Cosplay, peluca y props
+                            </p>
+                            <span class="badge bg-info">
+                                Props
+                            </span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex catalog-item cosplay">
+                    <div class="card shadow w-100">
+                        <img src="../images/tienda/tienda_caja_2.png" class="card-img-top" alt="Cosplay">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Cosplay Hatsune Miku
+                            </h5>
+                            <p class="card-text">
+                                Cosplay completo
+                            </p>
+                            <span class="badge bg-success">
+                                Cosplay
+                            </span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex catalog-item cosplay">
+                    <div class="card shadow w-100">
+                        <img src="../images/tienda/tienda_caja_9.png" class="card-img-top" alt="Cosplay">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Cosplay Frieren
+                            </h5>
+                            <p class="card-text">
+                                Cosplay, peluca y props
+                            </p>
+                            <span class="badge bg-success">
+                                Cosplay
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex catalog-item calzado">
+                    <div class="card shadow w-100">
+                        <img src="../images/tienda/tienda_caja_12.png" class="card-img-top" alt="Calzado">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Calzado Cosplay Sports
+                            </h5>
+                            <p class="card-text">
+                                Zapatillas para cosplay deportivo
+                            </p>
+                            <span class="badge bg-warning">
+                                Calzado
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex catalog-item calzado">
+                    <div class="card shadow w-100">
+                        <img src="../images/tienda/tienda_caja_13.png" class="card-img-top" alt="Calzado">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Botas Cyberpunk Cosplay
+                            </h5>
+                            <p class="card-text">
+                                Botas altas para cosplay
+                            </p>
+                            <span class="badge bg-warning">
+                                Calzado
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="container text-center my-4">
+            <a class="btn btn-link" href="#">
+                Volver arriba
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark mt-auto py-3">
+        <div class="container">
+            <h2 class="text-white text-center m-0">
+                Revolución Otaku Oficial ©
+            </h2>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+    // Filtro interactivo por categoría (simple)
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.catalog-item');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('btn-dark'));
+            filterBtns.forEach(b => b.classList.add('btn-outline-dark'));
+            btn.classList.remove('btn-outline-dark');
+            btn.classList.add('btn-dark');
+            const cat = btn.getAttribute('data-category');
+            items.forEach(item => {
+                if(cat === 'all' || item.classList.contains(cat)){
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    </script>
 </body>
-
-<footer>
-    <h2>Revolución Otaku Oficial ©</h2>
-
-</footer>
 </html>
